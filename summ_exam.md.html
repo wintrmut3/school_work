@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>summ_exam</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX","output/HTML-CSS"],
+    extensions: [],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    },
+    showMathMenu: false
+  });
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+</script>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(43, 63, 106); background-color: rgb(248, 246, 241); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(67, 98, 164); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(30, 30, 8); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(67, 98, 164); border-color: rgb(221, 211, 187); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(221, 211, 187); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(221, 211, 187); }
+.markdown-preview:not([data-use-github-style]) pre, .markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(238, 233, 221); }
+.markdown-preview:not([data-use-github-style]) pre, .markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(241, 237, 227); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(221, 211, 187) rgb(221, 211, 187) rgb(211, 198, 166); border-image: initial; background-color: rgb(238, 233, 221); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] pre, .markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview del { text-decoration: none; position: relative; }
+.markdown-preview del::after { border-bottom: 1px solid black; content: ""; left: 0px; position: absolute; right: 0px; top: 50%; }
+.markdown-preview .flash { animation: flash 1s ease-out 1; outline: rgba(255, 0, 0, 0) solid 1px; }
+.markdown-preview .flash:not(li) { display: block; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher {
+  background-color: #777;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+/*
+@cyan:         #35a766;
+@blue:         #5977d3;
+@purple:       #8100c6;
+@green:        #8fad06;
+@red:          #d24d4d;
+@orange:       #cd8e21;
+@light-orange: #e3a92d;
+*/
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-thin-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-thinitalic-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-italic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-medium-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-mediumitalic-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-black-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-blackitalic-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'roboto_condensedlight';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedlight_italic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condenseditalic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-italic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedregular';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-regular-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedbold';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedbold_italic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: condensed;
+}
+pre.editor-colors .gutter .line-number {
+  /* Use CSS specificity to force errors to override warnings and info markers */
+  /* Use CSS specificity to force warnings to override info markes. */
+}
+pre.editor-colors .gutter .line-number.latex-error,
+pre.editor-colors .gutter .line-number.latex-error.latex-warning,
+pre.editor-colors .gutter .line-number.latex-error.latex-info,
+pre.editor-colors .gutter .line-number.latex-error.latex-warning.latex-info {
+  border-left: 2px solid #EF5350;
+  padding-left: calc(0.5em - 2px);
+}
+pre.editor-colors .gutter .line-number.latex-warning,
+pre.editor-colors .gutter .line-number.latex-warning.latex-info {
+  border-left: 2px solid #FFCA28;
+  padding-left: calc(0.5em - 2px);
+}
+pre.editor-colors .gutter .line-number.latex-info {
+  border-left: 2px solid #64B5F6;
+  padding-left: calc(0.5em - 2px);
+}
+
+/*
+@cyan:         #35a766;
+@blue:         #5977d3;
+@purple:       #8100c6;
+@green:        #8fad06;
+@red:          #d24d4d;
+@orange:       #cd8e21;
+@light-orange: #e3a92d;
+*/
+pre.editor-colors {
+  background-color: #f8f6f1;
+  color: #2b3f6a;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(228, 220, 200, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: #e0dad3;
+}
+pre.editor-colors .indent-guide {
+  color: rgba(169, 193, 214, 0.7);
+}
+pre.editor-colors .invisible-character {
+  color: rgba(169, 193, 214, 0.7);
+}
+pre.editor-colors .gutter-container {
+  margin-right: 0.8em;
+}
+pre.editor-colors .gutter {
+  background-color: #e0dad3;
+  color: #2a120a;
+}
+pre.editor-colors .gutter .line-number {
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #c7bcaf;
+  color: #2a120a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  color: #2a120a;
+}
+pre.editor-colors .line-number.folded,
+pre.editor-colors .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #255f93;
+}
+pre.editor-colors .selection .region {
+  background-color: #e4dcc8;
+}
+.bracket-matcher .region {
+  background-color: rgba(237, 169, 251, 0.61);
+}
+.syntax--comment {
+  color: #9ca3b0;
+  font-style: italic;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #379566;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #8f932b;
+}
+.syntax--keyword {
+  color: #8f932b;
+}
+.syntax--keyword.syntax--control {
+  color: #2b3f6a;
+  font-weight: bold;
+}
+.syntax--keyword.syntax--operator {
+  font-weight: bold;
+  color: #1c4b33;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #5e78e1;
+}
+.syntax--keyword.syntax--other.syntax--attribute-name {
+  color: #2b3f6a;
+  font-weight: bold;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #8f932b;
+}
+.syntax--storage {
+  color: #5e78e1;
+}
+.syntax--storage.syntax--todo,
+.syntax--storage.syntax--idea,
+.syntax--storage.syntax--fixme,
+.syntax--storage.syntax--hack {
+  color: #8100c6;
+  background-color: rgba(227, 169, 45, 0.1);
+  text-decoration: none;
+  border-bottom: rgba(169, 193, 214, 0.7);
+  border-width: 0px 0px 1px 0px;
+  border-style: none none dotted none;
+}
+.syntax--constant {
+  color: #c16161;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #8f932b;
+}
+.syntax--constant.syntax--numeric {
+  color: #c16161;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #8f932b;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #8f932b;
+}
+.syntax--variable {
+  color: #5e78e1;
+}
+.syntax--variable.syntax--interpolation {
+  color: #3354d9;
+}
+.syntax--invalid.syntax--illegal {
+  background-color: #c16161;
+  color: #f8f6f1;
+}
+.syntax--string.syntax--interpolated {
+  background-color: rgba(255, 204, 0, 0.03);
+}
+.syntax--string.syntax--quoted {
+  background-color: rgba(255, 204, 0, 0.03);
+  color: rgba(106, 68, 28, 0.77);
+}
+.syntax--string.syntax--regexp {
+  color: #379566;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #d08e25;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #c16161;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #808999;
+}
+.syntax--punctuation.syntax--definition.syntax--tag {
+  color: #ac4343;
+}
+.syntax--punctuation.syntax--definition.syntax--parameters.syntax--end,
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--end,
+.syntax--punctuation.syntax--definition.syntax--parameters.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--arguments.syntax--begin {
+  color: #6e7daa;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #5e78e1;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: bold-color;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #ac4343;
+}
+.syntax--support.syntax--class {
+  color: #379566;
+}
+.syntax--support.syntax--function {
+  color: #d08e25;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #d08e25;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #2b3f6a;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #c16161;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #5e78e1;
+}
+.syntax--entity.syntax--name.syntax--label {
+  color: #5e78e1;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d08e25;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #5e78e1;
+}
+.syntax--meta.syntax--class {
+  color: #2b3f6a;
+}
+.syntax--meta.syntax--method {
+  color: #255f93;
+}
+.syntax--meta.syntax--link {
+  color: #d08e25;
+}
+.syntax--meta.syntax--require {
+  color: #5e78e1;
+}
+.syntax--meta.syntax--selector {
+  color: #d08e25;
+}
+.syntax--meta.syntax--separator {
+  color: #2b3f6a;
+}
+.syntax--none {
+  color: red;
+}
+/*---------------------------------------
+ below: optional extra stuff for addon packages
+-----------------------------------------*/
+.highlights .highlight-selected .region {
+  border-radius: 4px;
+  box-sizing: content-box;
+  padding: 0 1px 0 0;
+  margin: -1px 0 0 -1px;
+  background-color: transparent;
+  border-width: 1.5px;
+  border-style: dashed;
+}
+.highlights .highlight-selected.light-theme .region {
+  border-color: rgba(238, 11, 143, 0.8);
+}
+.highlights .highlight-selected.light-theme.syntax--background .region {
+  background-color: rgba(236, 13, 132, 0.35);
+}
+pre.editor-colors[data-grammar="source gfm"] .gutter-container {
+  margin-right: 2em;
+}
+.syntax--markup.syntax--changed,
+.syntax--md.syntax--changed,
+.syntax--gfm.syntax--changed,
+.syntax--pfm.syntax--changed {
+  color: #8100c6;
+}
+.syntax--markup.syntax--deleted,
+.syntax--md.syntax--deleted,
+.syntax--gfm.syntax--deleted,
+.syntax--pfm.syntax--deleted {
+  color: #c16161;
+}
+.syntax--markup.syntax--italic,
+.syntax--md.syntax--italic,
+.syntax--gfm.syntax--italic,
+.syntax--pfm.syntax--italic {
+  color: #0e72aa;
+  font-style: italic;
+}
+.syntax--markup.syntax--italic .syntax--punctuation,
+.syntax--md.syntax--italic .syntax--punctuation,
+.syntax--gfm.syntax--italic .syntax--punctuation,
+.syntax--pfm.syntax--italic .syntax--punctuation {
+  opacity: 0.6;
+}
+.syntax--markup.syntax--bold,
+.syntax--md.syntax--bold,
+.syntax--gfm.syntax--bold,
+.syntax--pfm.syntax--bold,
+.syntax--markup.syntax--heading,
+.syntax--md.syntax--heading,
+.syntax--gfm.syntax--heading,
+.syntax--pfm.syntax--heading,
+.syntax--markup.syntax--strong.syntax--emphasis,
+.syntax--md.syntax--strong.syntax--emphasis,
+.syntax--gfm.syntax--strong.syntax--emphasis,
+.syntax--pfm.syntax--strong.syntax--emphasis {
+  color: #0a537b;
+  font-weight: bold;
+}
+.syntax--markup.syntax--bold .syntax--punctuation,
+.syntax--md.syntax--bold .syntax--punctuation,
+.syntax--gfm.syntax--bold .syntax--punctuation,
+.syntax--pfm.syntax--bold .syntax--punctuation,
+.syntax--markup.syntax--heading .syntax--punctuation,
+.syntax--md.syntax--heading .syntax--punctuation,
+.syntax--gfm.syntax--heading .syntax--punctuation,
+.syntax--pfm.syntax--heading .syntax--punctuation,
+.syntax--markup.syntax--strong.syntax--emphasis .syntax--punctuation,
+.syntax--md.syntax--strong.syntax--emphasis .syntax--punctuation,
+.syntax--gfm.syntax--strong.syntax--emphasis .syntax--punctuation,
+.syntax--pfm.syntax--strong.syntax--emphasis .syntax--punctuation {
+  opacity: 0.5;
+}
+.syntax--markup.syntax--quote,
+.syntax--md.syntax--quote,
+.syntax--gfm.syntax--quote,
+.syntax--pfm.syntax--quote {
+  color: rgba(126, 81, 33, 0.77);
+  font-style: italic;
+}
+.syntax--markup.syntax--quote .syntax--italic,
+.syntax--md.syntax--quote .syntax--italic,
+.syntax--gfm.syntax--quote .syntax--italic,
+.syntax--pfm.syntax--quote .syntax--italic {
+  color: rgba(158, 56, 1, 0.77);
+}
+.syntax--markup.syntax--quote .syntax--bold,
+.syntax--md.syntax--quote .syntax--bold,
+.syntax--gfm.syntax--quote .syntax--bold,
+.syntax--pfm.syntax--quote .syntax--bold,
+.syntax--markup.syntax--quote .syntax--strong,
+.syntax--md.syntax--quote .syntax--strong,
+.syntax--gfm.syntax--quote .syntax--strong,
+.syntax--pfm.syntax--quote .syntax--strong {
+  color: rgba(126, 81, 33, 0.77);
+  font-weight: bold;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--md.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--gfm.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--pfm.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #5e78e1;
+}
+.syntax--markup.syntax--inserted,
+.syntax--md.syntax--inserted,
+.syntax--gfm.syntax--inserted,
+.syntax--pfm.syntax--inserted {
+  color: #8f932b;
+}
+.syntax--markup.syntax--list > .syntax--punctuation,
+.syntax--md.syntax--list > .syntax--punctuation,
+.syntax--gfm.syntax--list > .syntax--punctuation,
+.syntax--pfm.syntax--list > .syntax--punctuation {
+  color: #d48767;
+  font-weight: bold;
+}
+.syntax--markup.syntax--raw,
+.syntax--md.syntax--raw,
+.syntax--gfm.syntax--raw,
+.syntax--pfm.syntax--raw,
+.syntax--markup.syntax--embedded.syntax--source.syntax--js,
+.syntax--md.syntax--embedded.syntax--source.syntax--js,
+.syntax--gfm.syntax--embedded.syntax--source.syntax--js,
+.syntax--pfm.syntax--embedded.syntax--source.syntax--js {
+  background-color: rgba(245, 250, 252, 0.65);
+  font-style: italic;
+}
+.syntax--markup.syntax--raw.syntax--inline,
+.syntax--md.syntax--raw.syntax--inline,
+.syntax--gfm.syntax--raw.syntax--inline,
+.syntax--pfm.syntax--raw.syntax--inline,
+.syntax--markup.syntax--embedded.syntax--source.syntax--js.syntax--inline,
+.syntax--md.syntax--embedded.syntax--source.syntax--js.syntax--inline,
+.syntax--gfm.syntax--embedded.syntax--source.syntax--js.syntax--inline,
+.syntax--pfm.syntax--embedded.syntax--source.syntax--js.syntax--inline {
+  color: #8f932b;
+}
+.syntax--markup.syntax--strike,
+.syntax--md.syntax--strike,
+.syntax--gfm.syntax--strike,
+.syntax--pfm.syntax--strike {
+  text-decoration: line-through;
+}
+.syntax--markup.syntax--underline,
+.syntax--md.syntax--underline,
+.syntax--gfm.syntax--underline,
+.syntax--pfm.syntax--underline {
+  text-decoration: none;
+  border-bottom: rgba(169, 193, 214, 0.7);
+  border-width: 0px 0px 1px 0px;
+  border-style: none none solid none;
+}
+.syntax--markup.syntax--heading,
+.syntax--md.syntax--heading,
+.syntax--gfm.syntax--heading,
+.syntax--pfm.syntax--heading {
+  color: #2a120a;
+  font-weight: normal;
+}
+.syntax--markup.syntax--heading.syntax--heading-1,
+.syntax--md.syntax--heading.syntax--heading-1,
+.syntax--gfm.syntax--heading.syntax--heading-1,
+.syntax--pfm.syntax--heading.syntax--heading-1 {
+  font-weight: 900;
+  opacity: 1.0;
+}
+.syntax--markup.syntax--heading.syntax--heading-2,
+.syntax--md.syntax--heading.syntax--heading-2,
+.syntax--gfm.syntax--heading.syntax--heading-2,
+.syntax--pfm.syntax--heading.syntax--heading-2 {
+  font-weight: 800;
+  opacity: 0.9;
+}
+.syntax--markup.syntax--heading.syntax--heading-3,
+.syntax--md.syntax--heading.syntax--heading-3,
+.syntax--gfm.syntax--heading.syntax--heading-3,
+.syntax--pfm.syntax--heading.syntax--heading-3 {
+  font-weight: 700;
+  opacity: 0.85;
+}
+.syntax--markup.syntax--heading.syntax--heading-4,
+.syntax--md.syntax--heading.syntax--heading-4,
+.syntax--gfm.syntax--heading.syntax--heading-4,
+.syntax--pfm.syntax--heading.syntax--heading-4,
+.syntax--markup.syntax--heading.syntax--heading-5,
+.syntax--md.syntax--heading.syntax--heading-5,
+.syntax--gfm.syntax--heading.syntax--heading-5,
+.syntax--pfm.syntax--heading.syntax--heading-5,
+.syntax--markup.syntax--heading.syntax--heading-6,
+.syntax--md.syntax--heading.syntax--heading-6,
+.syntax--gfm.syntax--heading.syntax--heading-6,
+.syntax--pfm.syntax--heading.syntax--heading-6 {
+  opacity: 0.80;
+}
+.syntax--markup.syntax--heading.syntax--marker,
+.syntax--md.syntax--heading.syntax--marker,
+.syntax--gfm.syntax--heading.syntax--marker,
+.syntax--pfm.syntax--heading.syntax--marker {
+  color: rgba(42, 18, 10, 0.55);
+}
+.syntax--markup.syntax--support,
+.syntax--md.syntax--support,
+.syntax--gfm.syntax--support,
+.syntax--pfm.syntax--support {
+  color: #6e7daa;
+}
+.syntax--markup.syntax--markup.syntax--heading,
+.syntax--md.syntax--markup.syntax--heading,
+.syntax--gfm.syntax--markup.syntax--heading,
+.syntax--pfm.syntax--markup.syntax--heading {
+  font-weight: normal;
+}
+.syntax--markup.syntax--variable,
+.syntax--md.syntax--variable,
+.syntax--gfm.syntax--variable,
+.syntax--pfm.syntax--variable {
+  color: #5e78e1;
+}
+.syntax--markup.syntax--entity,
+.syntax--md.syntax--entity,
+.syntax--gfm.syntax--entity,
+.syntax--pfm.syntax--entity {
+  color: #255f93;
+}
+.syntax--markup.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--md.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--gfm.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--pfm.syntax--punctuation.syntax--definition.syntax--begin,
+.syntax--markup.syntax--punctuation.syntax--definition.syntax--end,
+.syntax--md.syntax--punctuation.syntax--definition.syntax--end,
+.syntax--gfm.syntax--punctuation.syntax--definition.syntax--end,
+.syntax--pfm.syntax--punctuation.syntax--definition.syntax--end {
+  color: #6e7daa;
+}
+.syntax--markup.syntax--username,
+.syntax--md.syntax--username,
+.syntax--gfm.syntax--username,
+.syntax--pfm.syntax--username,
+.syntax--markup.syntax--reference.syntax--variable,
+.syntax--md.syntax--reference.syntax--variable,
+.syntax--gfm.syntax--reference.syntax--variable,
+.syntax--pfm.syntax--reference.syntax--variable {
+  color: #aa5c08;
+}
+.syntax--markup.syntax--mention,
+.syntax--md.syntax--mention,
+.syntax--gfm.syntax--mention,
+.syntax--pfm.syntax--mention,
+.syntax--markup.syntax--reference.syntax--variable > .syntax--punctuation,
+.syntax--md.syntax--reference.syntax--variable > .syntax--punctuation,
+.syntax--gfm.syntax--reference.syntax--variable > .syntax--punctuation,
+.syntax--pfm.syntax--reference.syntax--variable > .syntax--punctuation {
+  color: rgba(169, 86, 31, 0.43);
+}
+.syntax--markup.syntax--list.syntax--variable,
+.syntax--md.syntax--list.syntax--variable,
+.syntax--gfm.syntax--list.syntax--variable,
+.syntax--pfm.syntax--list.syntax--variable {
+  color: #d48767;
+  font-weight: bold;
+}
+.syntax--markup.syntax--list > .syntax--punctuation,
+.syntax--md.syntax--list > .syntax--punctuation,
+.syntax--gfm.syntax--list > .syntax--punctuation,
+.syntax--pfm.syntax--list > .syntax--punctuation {
+  font-weight: bold;
+  opacity: 1;
+  color: #d48767;
+}
+.syntax--markup.syntax--list > .syntax--punctuation .syntax--checkbox,
+.syntax--md.syntax--list > .syntax--punctuation .syntax--checkbox,
+.syntax--gfm.syntax--list > .syntax--punctuation .syntax--checkbox,
+.syntax--pfm.syntax--list > .syntax--punctuation .syntax--checkbox {
+  color: #d48767;
+  background: rgba(212, 135, 103, 0.05);
+}
+.syntax--markup.syntax--list.syntax--task.syntax--completed,
+.syntax--md.syntax--list.syntax--task.syntax--completed,
+.syntax--gfm.syntax--list.syntax--task.syntax--completed,
+.syntax--pfm.syntax--list.syntax--task.syntax--completed {
+  color: #2b3f6a;
+  opacity: 0.333;
+}
+.syntax--markup.syntax--list.syntax--task.syntax--completed .syntax--code,
+.syntax--md.syntax--list.syntax--task.syntax--completed .syntax--code,
+.syntax--gfm.syntax--list.syntax--task.syntax--completed .syntax--code,
+.syntax--pfm.syntax--list.syntax--task.syntax--completed .syntax--code {
+  background: transparent;
+  color: #2b3f6a;
+}
+.syntax--markup.syntax--list.syntax--task.syntax--completed .syntax--todo,
+.syntax--md.syntax--list.syntax--task.syntax--completed .syntax--todo,
+.syntax--gfm.syntax--list.syntax--task.syntax--completed .syntax--todo,
+.syntax--pfm.syntax--list.syntax--task.syntax--completed .syntax--todo,
+.syntax--markup.syntax--list.syntax--task.syntax--completed .syntax--review,
+.syntax--md.syntax--list.syntax--task.syntax--completed .syntax--review,
+.syntax--gfm.syntax--list.syntax--task.syntax--completed .syntax--review,
+.syntax--pfm.syntax--list.syntax--task.syntax--completed .syntax--review {
+  color: inherit;
+}
+.syntax--markup.syntax--list.syntax--task.syntax--completed .syntax--fixme,
+.syntax--md.syntax--list.syntax--task.syntax--completed .syntax--fixme,
+.syntax--gfm.syntax--list.syntax--task.syntax--completed .syntax--fixme,
+.syntax--pfm.syntax--list.syntax--task.syntax--completed .syntax--fixme {
+  background: transparent;
+  outline: none;
+  color: inherit;
+}
+.syntax--markup.syntax--list.syntax--empty .syntax--punctuation,
+.syntax--md.syntax--list.syntax--empty .syntax--punctuation,
+.syntax--gfm.syntax--list.syntax--empty .syntax--punctuation,
+.syntax--pfm.syntax--list.syntax--empty .syntax--punctuation {
+  color: #d48767;
+}
+.syntax--markup.syntax--critic.syntax--addition,
+.syntax--md.syntax--critic.syntax--addition,
+.syntax--gfm.syntax--critic.syntax--addition,
+.syntax--pfm.syntax--critic.syntax--addition {
+  color: #8f932b;
+}
+.syntax--markup.syntax--critic.syntax--addition.syntax--marker,
+.syntax--md.syntax--critic.syntax--addition.syntax--marker,
+.syntax--gfm.syntax--critic.syntax--addition.syntax--marker,
+.syntax--pfm.syntax--critic.syntax--addition.syntax--marker {
+  color: rgba(143, 147, 43, 0.5) !important;
+}
+.syntax--markup.syntax--critic.syntax--deletion,
+.syntax--md.syntax--critic.syntax--deletion,
+.syntax--gfm.syntax--critic.syntax--deletion,
+.syntax--pfm.syntax--critic.syntax--deletion {
+  color: #c16161;
+}
+.syntax--markup.syntax--critic .syntax--deletion.syntax--marker,
+.syntax--md.syntax--critic .syntax--deletion.syntax--marker,
+.syntax--gfm.syntax--critic .syntax--deletion.syntax--marker,
+.syntax--pfm.syntax--critic .syntax--deletion.syntax--marker {
+  color: rgba(193, 97, 97, 0.5) !important;
+}
+.syntax--markup.syntax--critic.syntax--substitution,
+.syntax--md.syntax--critic.syntax--substitution,
+.syntax--gfm.syntax--critic.syntax--substitution,
+.syntax--pfm.syntax--critic.syntax--substitution {
+  color: #d08e25;
+}
+.syntax--markup.syntax--critic.syntax--substitution.syntax--marker,
+.syntax--md.syntax--critic.syntax--substitution.syntax--marker,
+.syntax--gfm.syntax--critic.syntax--substitution.syntax--marker,
+.syntax--pfm.syntax--critic.syntax--substitution.syntax--marker {
+  color: rgba(208, 142, 37, 0.5) !important;
+}
+.syntax--markup.syntax--critic.syntax--substitution.syntax--operator,
+.syntax--md.syntax--critic.syntax--substitution.syntax--operator,
+.syntax--gfm.syntax--critic.syntax--substitution.syntax--operator,
+.syntax--pfm.syntax--critic.syntax--substitution.syntax--operator {
+  color: #a5701d !important;
+}
+.syntax--markup.syntax--critic.syntax--comment,
+.syntax--md.syntax--critic.syntax--comment,
+.syntax--gfm.syntax--critic.syntax--comment,
+.syntax--pfm.syntax--critic.syntax--comment {
+  color: #9ca3b0;
+}
+.syntax--markup.syntax--critic.syntax--comment.syntax--marker,
+.syntax--md.syntax--critic.syntax--comment.syntax--marker,
+.syntax--gfm.syntax--critic.syntax--comment.syntax--marker,
+.syntax--pfm.syntax--critic.syntax--comment.syntax--marker {
+  color: rgba(156, 163, 176, 0.5) !important;
+}
+.syntax--markup.syntax--critic.syntax--highlight,
+.syntax--md.syntax--critic.syntax--highlight,
+.syntax--gfm.syntax--critic.syntax--highlight,
+.syntax--pfm.syntax--critic.syntax--highlight {
+  color: #5e78e1;
+}
+.syntax--markup.syntax--critic.syntax--highlight.syntax--marker,
+.syntax--md.syntax--critic.syntax--highlight.syntax--marker,
+.syntax--gfm.syntax--critic.syntax--highlight.syntax--marker,
+.syntax--pfm.syntax--critic.syntax--highlight.syntax--marker {
+  color: rgba(94, 120, 225, 0.5) !important;
+}
+.syntax--markup.syntax--math,
+.syntax--md.syntax--math,
+.syntax--gfm.syntax--math,
+.syntax--pfm.syntax--math {
+  background: rgba(143, 147, 43, 0.1);
+  color: #8f932b;
+}
+.syntax--markup.syntax--math .syntax--support,
+.syntax--md.syntax--math .syntax--support,
+.syntax--gfm.syntax--math .syntax--support,
+.syntax--pfm.syntax--math .syntax--support {
+  color: #696c1f;
+}
+.syntax--markup.syntax--math .syntax--punctuation.syntax--arguments,
+.syntax--md.syntax--math .syntax--punctuation.syntax--arguments,
+.syntax--gfm.syntax--math .syntax--punctuation.syntax--arguments,
+.syntax--pfm.syntax--math .syntax--punctuation.syntax--arguments {
+  color: #c87373;
+}
+.syntax--markup.syntax--math .syntax--tex.syntax--constant,
+.syntax--md.syntax--math .syntax--tex.syntax--constant,
+.syntax--gfm.syntax--math .syntax--tex.syntax--constant,
+.syntax--pfm.syntax--math .syntax--tex.syntax--constant {
+  color: #d08e25;
+}
+.syntax--markup.syntax--math .syntax--tex.syntax--constant.syntax--numeric,
+.syntax--md.syntax--math .syntax--tex.syntax--constant.syntax--numeric,
+.syntax--gfm.syntax--math .syntax--tex.syntax--constant.syntax--numeric,
+.syntax--pfm.syntax--math .syntax--tex.syntax--constant.syntax--numeric {
+  color: #8f932b;
+}
+.syntax--markup.syntax--definition.syntax--block,
+.syntax--md.syntax--definition.syntax--block,
+.syntax--gfm.syntax--definition.syntax--block,
+.syntax--pfm.syntax--definition.syntax--block {
+  background: rgba(94, 120, 225, 0.1);
+}
+.syntax--markup.syntax--footnote,
+.syntax--md.syntax--footnote,
+.syntax--gfm.syntax--footnote,
+.syntax--pfm.syntax--footnote,
+.syntax--markup.syntax--link,
+.syntax--md.syntax--link,
+.syntax--gfm.syntax--link,
+.syntax--pfm.syntax--link,
+.syntax--markup.syntax--auto,
+.syntax--md.syntax--auto,
+.syntax--gfm.syntax--auto,
+.syntax--pfm.syntax--auto {
+  color: #255f93;
+}
+.syntax--markup.syntax--footnote.syntax--destination .syntax--uri,
+.syntax--md.syntax--footnote.syntax--destination .syntax--uri,
+.syntax--gfm.syntax--footnote.syntax--destination .syntax--uri,
+.syntax--pfm.syntax--footnote.syntax--destination .syntax--uri,
+.syntax--markup.syntax--link.syntax--destination .syntax--uri,
+.syntax--md.syntax--link.syntax--destination .syntax--uri,
+.syntax--gfm.syntax--link.syntax--destination .syntax--uri,
+.syntax--pfm.syntax--link.syntax--destination .syntax--uri,
+.syntax--markup.syntax--auto.syntax--destination .syntax--uri,
+.syntax--md.syntax--auto.syntax--destination .syntax--uri,
+.syntax--gfm.syntax--auto.syntax--destination .syntax--uri,
+.syntax--pfm.syntax--auto.syntax--destination .syntax--uri {
+  text-decoration: none;
+  border-bottom: rgba(169, 193, 214, 0.7);
+  border-width: 0px 0px 1px 0px;
+  border-style: none none solid none;
+}
+.syntax--text.syntax--bibtex .syntax--entry-key {
+  color: #aa5c08;
+  font-weight: bold;
+}
+.syntax--text.syntax--bibtex .syntax--begin,
+.syntax--text.syntax--bibtex .syntax--end {
+  color: #2b3f6a;
+}
+.syntax--text.syntax--bibtex .syntax--punctuation.syntax--definition.syntax--keyword {
+  opacity: 0.7;
+}
+.syntax--source .syntax--js.syntax--brace.syntax--round,
+.syntax--source .syntax--js.syntax--brace.syntax--curly {
+  color: #5e6fa0;
+}
+.syntax--source .syntax--js.syntax--punctuation.syntax--terminator.syntax--statement {
+  color: #255f93;
+}
+.syntax--source .syntax--js.syntax--delimiter.syntax--method.syntax--period {
+  color: #6e7daa;
+}
+.syntax--source .syntax--js.syntax--delimiter.syntax--object.syntax--comma {
+  color: #5e6fa0;
+}
+.syntax--source .syntax--js.syntax--variable.syntax--language.syntax--js {
+  color: #379566;
+}
+.syntax--css .syntax--punctuation.syntax--separator.syntax--key-value {
+  color: #255f93;
+}
+.syntax--body.syntax--vala {
+  color: #2b3f6a;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  background-color: rgba(182, 137, 215, 0);
+  color: #6e7daa;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  background-color: rgba(182, 137, 215, 0);
+  opacity: 0.75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  background-color: rgba(255, 204, 0, 0);
+  color: rgba(126, 81, 33, 0.77);
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #c16161;
+  background-color: rgba(182, 137, 215, 0);
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h2 id="foundations-of-economics">Foundations of Economics</h2>
+<ul>
+<li>Econ is a <strong>social science</strong> that studies PvP and PvE interactions</li>
+<li>Econ studies balancing society’s infinite needs and wants</li>
+<li><strong>Scarcity</strong> occurs when there is a want/need for a good in limited supply.</li>
+<li><em>The following resources categories are scarce:</em>
+<ul>
+<li>Land [Natural Resources, Space]</li>
+<li>Labour [Humans - Physical/Intellectual]</li>
+<li>Capital [Means of Production, Tools/Tech]</li>
+</ul></li>
+<li><p>Adam Smith called economics <code>"a system of interactions between individuals that brings together those involved in the exchange of resources, goods and services"*</code></p></li>
+<li>Robert Heilbroner postulated that economies were <em>inevitable</em></li>
+<li>There are <strong>3 Basic Economic Questions</strong>
+<ul>
+<li>What should be produced?</li>
+<li>How should it be produced?</li>
+<li>For whom should it be produced?</li>
+</ul></li>
+</ul>
+<h4 id="economy-types">Economy Types</h4>
+<h5 id="command">COMMAND</h5>
+<ul>
+<li>State ownership of the factors of production [<em>Socialism</em>]</li>
+<li>Equality &gt; EFFICIENCY</li>
+<li>Central Planning -&gt; Inefficiency, Corruption, collapse</li>
+<li>No property rights</li>
+<li>Eg. {China} {Cuba} {USSR}</li>
+</ul>
+<h5 id="market">MARKET</h5>
+<ul>
+<li><em>Laissez Faire</em> = Leave it.</li>
+<li>A. Smith said the most effic. way of all. res. is by <strong>self interested exchanges without government intervention</strong><br>
+</li>
+<li>Circular Flow of Market Economy:
+<ul>
+<li>RESOURCES
+<ul>
+<li>{H}ouseholds buy from {P}roduct market, supplied by {F}irms, supplied by {R}esource markets who receive labour from H</li>
+</ul></li>
+<li>MONEY
+<ul>
+<li>H pays P, which pays F, which pays R, which pays H {wages}</li>
+</ul></li>
+</ul></li>
+</ul>
+<h5 id="mixed">MIXED</h5>
+<ul>
+<li>The most successful type so far</li>
+<li>Free market with government intervention</li>
+</ul>
+<h4 id="opportunity-cost-and-choice">Opportunity cost and Choice:</h4>
+<ul>
+<li>Tradeoffs are choices between mutually exclusive opportunities</li>
+<li>Opportunity cost is what must be given up to undertake an activity or economic exchange, and entirely ephemeral</li>
+</ul>
+<p><strong>Ceteris Paribus</strong> means <em>while all other variables equal</em></p>
+<p><em>Positive Econ</em> deals with facts</p>
+<p><em>Normative Econ</em> deals with opinions, evals</p>
+<h4 id="central-themes-in-economics">Central Themes in Economics:</h4>
+<ol type="1">
+<li>The extent to which governments should intervene in resalc {resource allocation}
+<ul>
+<li>LaisF believes that govinter can’t improve on a free market’s outcome</li>
+<li>John M Keynes believed that LaisF caused inefficiency in resalc and govinter could help achieve macroecon objectives like employment and growth<br>
+</li>
+<li>LaisF may lead to:
+<ul>
+<li>Instability, Under/Overproduction, Poverty, Inequality, Unemployment</li>
+</ul></li>
+</ul></li>
+<li>Threat to sustainability as a result of current resalc patterns
+<ul>
+<li><strong>Sustainability</strong> is the capacity to endure</li>
+<li>Long term growth depletes resources, used up by self-interested ppl</li>
+</ul></li>
+<li>Econ Effic. vs Equity
+<ul>
+<li><em>Efficiency</em> = No one can gain without someone losing</li>
+<li><em>Equity</em> = Fairness in distro of out in a nation</li>
+<li>Efficiency is good for society, though it may cause massive inequity</li>
+</ul></li>
+<li>Econ. Growth vs Development
+<ul>
+<li><strong>Growth</strong> is the increase in total output</li>
+<li><strong>Development</strong> is the increase in a nation’s ppl’s well being</li>
+<li>JMK believed that growth was a means to development</li>
+</ul></li>
+</ol>
+<h2 id="competitive-markets-demand-and-supply">Competitive Markets: Demand and Supply</h2>
+<ul>
+<li>Markets are places where buyers and sellers can interact and exchg goods</li>
+<li>-This can occur anywhere and at any time, where buyers and sellers interact.</li>
+<li>Scopes: Local, National and International</li>
+<li><strong>Competitive markets</strong> are those in which private firms can attempt to win business away from others to the goal of earning greater profits. This results in a zero sum system.</li>
+<li>Competitive markets bring a diversity of goods, efficiencies and wealth</li>
+<li><strong>Firms</strong> are groups of individuals that take FOPs to produce outputs</li>
+<li><strong>Industries</strong> are groups of firms in a similar market</li>
+</ul>
+<h4 id="industry-types">Industry Types:</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Num_Firms</th>
+<th>MktPower</th>
+<th>ProductDiff</th>
+<th>EaseOfEnEx</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Perfect competition</td>
+<td>Many</td>
+<td>None</td>
+<td>False</td>
+<td>Negligible</td>
+</tr>
+<tr class="even">
+<td>Monopolistic competition</td>
+<td>Many</td>
+<td>Minor</td>
+<td>True</td>
+<td>Minor</td>
+</tr>
+<tr class="odd">
+<td>Oligopoly</td>
+<td>Few</td>
+<td>Major</td>
+<td>Either</td>
+<td>Significant</td>
+</tr>
+<tr class="even">
+<td>Monopoly</td>
+<td>One</td>
+<td>Exceptional</td>
+<td>N/A</td>
+<td>Exceptional</td>
+</tr>
+</tbody>
+</table>
+<p><em>Competition is inversely related to power!</em></p>
+<h4 id="demand">DEMAND</h4>
+<ul>
+<li><strong>Demand</strong> is the qty of a good or service that consumers are willing and able to purchase at a time and price</li>
+<li>A <em>demand schedule</em> shows individual demand - a chart showing qty demanded and prices</li>
+<li><em>As price increases, demand decreases</em></li>
+<li>Demand curves {DC’s} have a negative derivative</li>
+<li>External Non Price determinants of demand:
+<ul>
+<li>Income</li>
+<li>Tastes and Prefs</li>
+<li>Num Buyers</li>
+<li>Demographic Change</li>
+<li>Govt Policy</li>
+<li>Season <span class="math"><script type="math/tex; mode=display"> Q_d = a - bP </script></span></li>
+</ul></li>
+<li><em>Qd</em> = quantity demanded</li>
+<li><em>a</em> = autonomous demand [if price = 0, Q intersect]</li>
+<li><em>b</em> = change in quantity due to price change</li>
+<li><em>P</em> = Price</li>
+</ul>
+<p>Changes in <em>b</em> shift the steepness of the curve, and represent how responsive consumers are to changes. Lower <em>b</em> = less sensitivity.</p>
+<h4 id="supply">Supply</h4>
+<ul>
+<li><strong>Supply</strong> is the qty of a good or service that producers are willing and able to produce at a time and price</li>
+<li>A <em>supply schedule</em> shows individual demand - a chart showing qty demanded and prices</li>
+<li><em>As price increases, supply increases</em></li>
+<li>Supply Curves {SC’s} have a negative derivative</li>
+<li>External Non Price determinants of supply:
+<ul>
+<li>Costs of production</li>
+<li>Productivity {QtyOut/QtyIn}</li>
+<li>Govinter {Tax/Regulations}</li>
+<li>Price of Related goods</li>
+<li>Supply Shocks</li>
+</ul></li>
+</ul>
+<p><span class="math"><script type="math/tex; mode=display"> Q_s = c + bP </script></span></p>
+<ul>
+<li><em>Qs</em> = quantity supplied</li>
+<li><em>a</em> = autonomous supply [if price = 0, Q intersect]</li>
+<li><em>b</em> = change in quantity due to price change</li>
+<li><em>P</em> = Price</li>
+</ul>
+<p><strong>Market Supply and Demand</strong> are combined individual curves, the total quantity from the entire market at a given price and time.</p>
+<h2 id="market-equilibrium-and-efficiency">Market Equilibrium and Efficiency</h2>
+<ul>
+<li>Equilibrium {EQL} is the state at which all contrasting forces cancel each other out</li>
+<li>The equilibrium price {Ep} is where qty supplied and qty demanded are equal. It is also called the market clearing price.</li>
+<li>Supply excess forces producers to lower P until surplus = 0</li>
+<li>Demand excess forces producers to raise P until shortage = 0</li>
+<li>Prices inform the producer <strong>What is to be produced</strong></li>
+<li>Optimization of prices inform <strong>How should it be produced</strong></li>
+</ul>
+<h4 id="solving-for-equilibria">Solving For Equilibria:</h4>
+<p><span class="math"><script type="math/tex; mode=display"> Solve:: [Q_s = c + b_sP] = [Q_d = a - b_dP] </script></span></p>
+<ol type="1">
+<li>Solve For <em>EP</em> {equal to P at Qs = Qd}</li>
+<li>Sub into either equation to get <em>EQ</em></li>
+</ol>
+<h4 id="market-efficiency">Market Efficiency</h4>
+<ul>
+<li><strong>Consumer Surplus</strong> {CS} is the benefit received by consumers when they pay a price below that which they are willing</li>
+<li><strong>Producer Surplus</strong> {PS} is the benefit received by producers when they are paid more than they would be willing to sell for</li>
+<li><strong>Marginal benefit</strong> {MB} is the benefit derived from each additional unit consumed</li>
+<li><strong>Marginal cost</strong> {MC} is due to the increasing cost of producing more units</li>
+<li><strong>Allocative Efficiency</strong> {AloEf} is achieved when production is such that MB = MC</li>
+</ul>
+<h2 id="elasticities">Elasticities</h2>
+<ul>
+<li><strong>Elasticity</strong> is responsiveness of consumers or producers to a change in a variable in the market</li>
+<li><em>ELASTIC</em>: Very Sensitive: Horizontal</li>
+<li><em>INELASTIC</em>: Insensitive: Vertical</li>
+<li>Applications:
+<ul>
+<li>Firms will decide on pricing based on consumer sensitivity</li>
+<li>Governments will consider elasticities so as not to destroy a market, and to optimize tax income. Taxing sensitive goods is a <strong>bad idea.</strong></li>
+</ul></li>
+</ul>
+<h4 id="types-of-elasticities">Types Of Elasticities</h4>
+<p>PED = <strong>Price Elasticity of Demand</strong> -&gt; How much quantity demanded changes based on price <span class="math"><script type="math/tex; mode=display"> PED = \frac{\% \Delta Q_d}{\%\Delta P}  </script></span></p>
+<ul>
+<li>Interpretation
+<ul>
+<li>PED &lt; 1 then there is inelastic demand, the curve is more vertical</li>
+<li>PED &gt; 1 then there is elastic demand, the curve is flatter</li>
+<li>PED = 1, it is unit elastic demand. {20% incr in price = 20% less sales}</li>
+<li>PED = 0, then any change in price is not important to the consumer. demand won’t change. ex O2 in a hermetically sealed room.</li>
+<li>PED = ∞, then any change in price will cause an infinite change in qty demanded (shoelaces or other commodities)</li>
+</ul></li>
+<li><strong>Factors [SPLAT]</strong>
+<ul>
+<li>S - Number of substitutes - More substitutes = More sensitivity</li>
+<li>P - Proportion of the consumer’s income the price of a good is - Higher Proportion = More sensitivity</li>
+<li>L - Luxury - More Luxurious = More Sensitivity</li>
+<li>A - Addictivity - Higher addictivity = <strong>Lower</strong> Sensitivity</li>
+<li>T - Time that consumers get to respond is a major factor. * As time passes, PED becomes more elastic, though it is inelastic at first.* - More Time = More Sensitivity</li>
+</ul></li>
+<li>Total Revenue Test:
+<ul>
+<li>if price is +ve proportional to total revenue, demand is inelastic. {You can increase prices}</li>
+<li>if price is -ve proportional to total revenue, demand is elastic {You should decrease prices} <span class="math"><script type="math/tex; mode=display">Revenue = P * Q_d = P* (a - bP) = Pa - bP^2 </script></span></li>
+</ul></li>
+<li>Revenue is a quadratic!</li>
+</ul>
+<p>XED = <strong>Cross Price Elasticity of Demand</strong> -&gt; How much demand for one product changes based on demand for another <span class="math"><script type="math/tex; mode=display"> XED = \frac{\% \Delta Q_{productA}}{\%\Delta P_{productB}}  </script></span></p>
+<ul>
+<li><strong>Complementary goods</strong> have a negative XED - as the use of one requires the other.</li>
+<li><strong>Substitute goods</strong> have a positive XED</li>
+<li>Interpretation
+<ul>
+<li>&lt;1 XED means they are cross price elastic, consumers are sensitive to the price of another good (many substitutes, for example)</li>
+<li>&gt;1 XED means they are cross price inelastic, fewer consumers will migrate if prices go up on a good</li>
+<li>XED = 1 means a direct correlation between the two goods</li>
+<li>XED = 0 means the goods are unrelated</li>
+<li>XED is how responsive consumers of good A are to a change in the price of good B. It can be pos or neg.</li>
+<li>The size of the XED tells how closely related the two goods are.</li>
+</ul></li>
+</ul>
+<p>PES = <strong>Price Elasticity of Supply</strong>– How much suppliers should change their supply qty based on changes in price of another product <span class="math"><script type="math/tex; mode=display"> PES = \frac{\% \Delta Q_s}{\%\Delta P}  </script></span></p>
+<ul>
+<li>Perfectly inelastic goods are usually fixed in their physical scarcity, like gold, or unique paintings by the dead.</li>
+<li>Perfectly elastic goods are those inventoried in large quantities.</li>
+<li><strong>Factors</strong>
+<ul>
+<li>Time:
+<ul>
+<li>S1 = Market period, instant price change = Extreme inelasticity</li>
+<li>S2 = Short term, a few months</li>
+<li>S3 = Long term, elastic</li>
+</ul></li>
+<li>Mobility of the factors of production</li>
+<li>The ability to store stocks</li>
+<li>The amount of unused capacity
+<ul>
+<li><em>Excess capacity</em> is how much output an industry can produce in S2 beyond current level without requiring expansion. This means price changes can be quickly taken advantage of.</li>
+<li><em>Full capacity</em> means more factories and equipment must be used, which takes time and money.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>YED = <strong>Income Elasticity of Demand</strong> -&gt; How much quantity demanded for a good changes based on the income of a consumer <span class="math"><script type="math/tex; mode=display"> YED = \frac{\% \Delta Q_d}{\%\Delta Income}  </script></span></p>
+<ul>
+<li>Normal goods have pos YED, inferior have neg YED</li>
+<li>Applications - production based on future income possibilities, governments will not increase income tax in the goal of reducing spending if they know that it is elastic, as there will be little change.</li>
+</ul>
+<h2 id="government-intervention">Government intervention</h2>
+<h4 id="taxes-and-subsidies">Taxes and Subsidies</h4>
+<ul>
+<li>A <strong>Tax</strong> is charge placed on an indiv or firm payable to a govt under punishment of law</li>
+<li>An <strong>Indirect Tax</strong> is a tax collected from supplier after supplier collects tax from the consumer</li>
+<li>Specific Tax - A flat rate ($2/carton)</li>
+<li>Ad Valorem Tax - A percentage on sales (13% HST)</li>
+<li>Excise Tax: Placed on a specific good</li>
+<li>Effect on Supply Curve
+<ul>
+<li>Specific Tax: A per unit tax shifts the SC <strong>back</strong> (upwards and left) by the amount of of the tax. <em>This value is constant per unit.</em></li>
+<li>Ad Valorem Tax: With the higher price of a good, the overall tax will increase so supply shifts back, but the distance between the init supply and post-tax supply increases. <em>It is more inelastic.</em></li>
+</ul></li>
+<li>Stakeholder Consequences from taxes:
+<ul>
+<li>Prices go up</li>
+<li>Output goes down</li>
+<li>Market size shrinks</li>
+<li>Consumers <strong>suffer</strong></li>
+<li>Producers <strong>suffer</strong></li>
+<li>Governments <strong>benefit</strong></li>
+</ul></li>
+<li><strong>Deadweight loss</strong> is the loss to output, a societal loss on both CS and PS</li>
+<li><strong>Tax Incidence</strong> is a measure of the consequence of a tax on all the affected parties
+<ul>
+<li><em>How much will the market shrink bc of the tax?</em></li>
+<li><em>How badly will firms and their employees suffer?</em></li>
+<li><em>Will the tax raise government revenue significantly or slightly?</em></li>
+<li>IF PED ~ PES, the tax burden is shared equally</li>
+<li>IF PED &gt; PES, producers pay more, lower govt rev. is made, DW loss increases</li>
+<li>IF PED &lt; PES, consumers pay more, more govt rev., DW loss is less</li>
+</ul></li>
+<li>A <strong>Subsidy</strong> is a payment from the govt to an indiv or firm to the purpose of increasing the purchase or supply of a good</li>
+<li>Motivations: To increase consumption, support an industry, or make a good more competitive on the world market</li>
+<li>These shift supply curves by the amount of the subsidy</li>
+</ul>
+<h4 id="price-controls">Price Controls</h4>
+<p><strong>Price ceiling</strong> - A Maximum price of a good, set by the government.</p>
+<ul>
+<li>Effects:
+<ul>
+<li>Shortages</li>
+<li>Rationing</li>
+<li>decreased market size</li>
+<li>No allocative efficiency</li>
+<li>Informal markets where price illegally meets the supply price at the given quantity</li>
+<li>Examples: Rice, Bread, Rent, Tuition, Housing</li>
+<li>Reparation: Producer Subsidy to increase supply, or state provision of the article</li>
+</ul></li>
+</ul>
+<p><strong>Price floor</strong> - a Minimum price of a good, set by the govt to support an industry</p>
+<ul>
+<li>Effects:
+<ul>
+<li>Surplus</li>
+<li>Reduced market size</li>
+<li>Overproduction</li>
+<li>Allocative inefficiency</li>
+<li>Informal markets</li>
+<li>Example: Agriculture, Minimum Wage</li>
+<li>Reparation: Excess could be thrown out, put into foreign markets, or the surplus may be <em>purchased directly</em> by the government</li>
+</ul></li>
+</ul>
+<p>Fixed Prices are set by the companies, like for movie tickets or concerts</p>
+<h2 id="market-failure">Market Failure</h2>
+<p><strong>Market Failure</strong> is any situation where the allocation of resources is inefficient. <strong>Pareto Optimality</strong> exists in a free competitive market, where no one can be made better off without making someone worse off. It occurs at <span class="math"><script type="math/tex; mode=display">MSC = MSB</script></span></p>
+<ul>
+<li>Types of Market Failure:
+<ul>
+<li>Negative Externality</li>
+<li>Positive Externality</li>
+<li>Lack of Public Goods</li>
+<li>Common Access to Resources and Threat to Sustainability</li>
+<li>Asymmetric Information</li>
+<li>Abuse of Monopoly Power</li>
+</ul></li>
+</ul>
+<h4 id="externalities">Externalities</h4>
+<ul>
+<li>An <strong>Externality</strong> is a transaction where someone other than the buyer or seller (A third party) experiences a benefit or loss as a result of the transaction.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Marginal Social Benefit</td>
+<td>All the utility or benefit derived from the use of a good, to consumers and society</td>
+</tr>
+<tr class="even">
+<td>Marginal Private Benefit</td>
+<td>Benefit derived exclusively by the consumer of a good</td>
+</tr>
+<tr class="odd">
+<td>Marginal Social Cost</td>
+<td>The cost incurred from the production or use of a good, including costs to producers and the rest of society</td>
+</tr>
+<tr class="even">
+<td>Marginal Private Cost</td>
+<td>The costs of a good incurred by the producer only</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Externality Type</th>
+<th>Definition</th>
+<th>Contingency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Negative Externality of Production</td>
+<td>Creation of a product creates spillover costs to others</td>
+<td>taxation, legislation/Regulation, Tradable Permits</td>
+</tr>
+<tr class="even">
+<td>Negative Externality of Consumption</td>
+<td>Use of a product creates spillover costs to others</td>
+<td>taxation, legislation/regulation, propaganda</td>
+</tr>
+<tr class="odd">
+<td>Positive Externality of Consumption</td>
+<td>Use of a product creates spillover benefits for others</td>
+<td>subsidy, state provision</td>
+</tr>
+<tr class="even">
+<td>Positive externality of production</td>
+<td>Making a product causes spillover benefits to others</td>
+<td>subsidy, legal requirements, advertising</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Negative Externalities</strong> occur when MSB &lt; MPB, or MSC &gt; MPC [Overconsumption, Overproduction]</p></li>
+<li><p><strong>Positive Externalities</strong> occur when MSB &gt; MPB, or MSC &lt; MPC [Underconsumption, Underproduction]</p></li>
+</ul>
+<h4 id="lack-of-public-goods">Lack of Public Goods</h4>
+<ul>
+<li><strong>Merit Good</strong> are goods where MSBs exceed MSC when sold on the open market - like carlock alarms</li>
+<li><strong>Public Goods</strong> are goods that is <strong>non rivalrous</strong> (Ie consumption of it doesn’t effect others from consuming it like nat’l ense) and <strong>non excludable</strong> (producers can’t prevent us from enjoying them - like streetlights) Ex: Fire department, lighthouses</li>
+<li><strong>Demerit Goods</strong> are goods where the MSC exceeds the MSB when sold, like for alcohol or addictive drugs</li>
+</ul>
+<h4 id="good-types">Good Types:</h4>
+<table>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Excludable</th>
+<th>Non-Excludable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Rivalrous</strong></td>
+<td>Property {Food, Clothing, Electronics}</td>
+<td>Common Goods{Fish, Timber, Air}</td>
+</tr>
+<tr class="even">
+<td><strong>Non-Rivalrous</strong></td>
+<td>Collective/Club Goods {Movies, Websites}</td>
+<td>Public Goods {NatlDefense, Police/Fire, Lighthouses}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="common-access-to-resources-and-threat-to-sustainability">Common Access to Resources and Threat to Sustainability</h4>
+<ul>
+<li>The <strong>Tragedy of the Commons</strong> is where common goods that everyone has access to are often abused. Incentives are not towards the long term good, and the resources are exploited. Ex. Overfishing, Deforestation</li>
+</ul>
+<p><strong>Free Rider Problem</strong> - Some people benefit from a resource but do not pay for it - Waterways, the Thames river for example, are repositories of untold quantities of toxic waste.</p>
+<ul>
+<li><strong>Potential Solutions to Sustainability Problems</strong>
+<ul>
+<li>The lack of a price mechanism causes depletion of goods, <strong>property rights</strong> bind the goods to the consumer and they are invested in its long term survival</li>
+<li><strong>Carbon taxes</strong> decrease the consumption or production of carbon emitting products to where MSC = MSB</li>
+<li><strong>Tradable permits</strong> allow for taxing pollution levels where licenses for polluting are distributed to the public. Permit Quantity does not increase, so price for a permit due to increased demand increases considerably.</li>
+</ul></li>
+</ul>
+<h4 id="other-types-of-market-failure">Other types of Market Failure</h4>
+<ul>
+<li><strong>Factor Immobility</strong>, where it is assumed that factors of production move towards where they are most needed. However, sometimes the are immobile [Workers]</li>
+<li><strong>Inequality</strong> - A localised market may be unequal</li>
+<li><strong>Government Failure/Policy Failure</strong> - The policy doesn’t really work, has unforseen consequences or creates a worse set of negative outcomes</li>
+<li><strong>Short Termism</strong> - Pursuit of short term objectives can lead to long term problems</li>
+<li><strong>Asymmetric information</strong> is where not everyone knows everything
+<ul>
+<li>Repaired by dissemination of info, legislation against insider trading</li>
+</ul></li>
+<li><strong>Monopoly power</strong> can be abused by restricting outputs
+<ul>
+<li>Legislation, Regulation, Monopolies under gov’t surveillance</li>
+</ul></li>
+</ul>
+<h2 id="costs-revenues-and-profits">Costs, Revenues and Profits</h2>
+<ul>
+<li><strong>Revenues</strong> are the income earned from a firm’s sale of its product</li>
+<li><strong>Profits</strong> are the difference between a firm’s total revenues and total costs</li>
+<li>The <strong>Short Run</strong> is the time period in which only labour is variable</li>
+<li>The <strong>Long Run</strong> is the time period in which all variables are ephemeral</li>
+<li><strong>Implicit Costs</strong> are the opportunity costs of an entrepreneur</li>
+<li><strong>Explicit Costs</strong> are the tangible costs
+<ul>
+<li>{WIRP}: <strong>W</strong>ages, <strong>I</strong>nterest, <strong>R</strong>ent, <strong>P</strong>rofit</li>
+</ul></li>
+<li><strong>Marginal Product</strong> is how much total output chgs with respect to a chg in the qty of labour</li>
+<li><strong>Marginal cost</strong> is how much total cost chgs with respect to a chg in the qty in labour</li>
+<li><em>MC intersects the ATC</em> at the miniumum of the ATC</li>
+<li><em>Likewise MP intersects the AP at the maximum of the AP</em></li>
+<li><strong>Total Productivity</strong> is the amount of output per input</li>
+<li><strong>Variable costs may be changed</strong></li>
+<li><em>TVC is inversely related to the TProduct</em> <span class="math"><script type="math/tex; mode=display"> MP =  \frac {\Delta TP} {\Delta Q_L}</script></span> <span class="math"><script type="math/tex; mode=display"> AP =  \frac { TP} {Q_L}</script></span></li>
+</ul>
+<h4 id="the-law-of-diminishing-returns">The Law of Diminishing Returns</h4>
+<ul>
+<li><p>As you add more labour to fixed land/capital, beyond a certain point the amount of productivity from each additional unit decreases, eventually becoming negative.</p></li>
+<li>The point of inflection is where <span class="math"><script type="math/tex; mode=display"> TP' < 1 </script></span>. Where diminishing returns start</li>
+<li>TP begins to decline as MP becomes negative</li>
+<li>The TC is an <em>upward translation</em> of the TVC by the TFC</li>
+<li><p>Marginal costs are depicted in a near-parabolic curve, a checkmark of sorts <span class="math"><script type="math/tex; mode=display">AP  = AvgRevenue - ATC</script></span></p></li>
+</ul>
+<h4 id="long-run-costs-of-production">Long Run Costs of Production</h4>
+<ul>
+<li><strong>Economies of Scale</strong> are the cost reducing advantages from producing large runs of output
+<ul>
+<li>These exist because of:
+<ul>
+<li>Bulk Order Discounts</li>
+<li>Higher Specialization</li>
+<li>Lower Shipping Costs</li>
+<li>Better Interest Rates</li>
+<li>More Bargaining Power</li>
+</ul></li>
+</ul></li>
+<li>The <strong>Minimum Efficient Scale {MES}</strong> is the minimum of the LRATC, where reductions in ATC become <em>difficult</em></li>
+<li><strong>Diseconomies of Scale</strong> occur when a firm is too big for its own good
+<ul>
+<li>This causes the LRATC to increase because of <strong>Communication Inefficiencies</strong>, <strong>Office Politics</strong>, and <strong>Government Regulation</strong></li>
+</ul></li>
+</ul>
+<h4 id="revenues">Revenues</h4>
+<p><span class="math"><script type="math/tex; mode=display"> TR =  P \times Q_{OUT}</script></span> <span class="math"><script type="math/tex; mode=display"> AR =  \frac {TR} {Q_{OUT}}</script></span> <span class="math"><script type="math/tex; mode=display"> MR =  \frac {\Delta TR} {\Delta Q_{OUT}}</script></span> <span class="math"><script type="math/tex; mode=display"> AP =  \frac { TP} {Q_L}</script></span></p>
+<ul>
+<li><strong>MR = AR = P</strong></li>
+<li>TR is <strong>Maximized</strong> when <span class="math"><script type="math/tex; mode=display"> MR = 0 </script></span></li>
+<li>A firm will never produce past <span class="math"><script type="math/tex; mode=display">Q_{MR=0}</script></span> because then increasing outputs decreases revenue and profits</li>
+</ul>
+<h4 id="the-short-run-profit-maximization-rule">The Short Run Profit Maximization Rule</h4>
+<ul>
+<li>Profits in the short term are maximized when <span class="math"><script type="math/tex; mode=display">MR = MC </script></span></li>
+<li>Or at <span class="math"><script type="math/tex; mode=display">Max_{TR-TC}</script></span></li>
+<li><strong>Normal Profits</strong> occur when a firm breaks even</li>
+<li><strong>Economic, Abnormal or Supernormal Profits</strong> are where the profit exceeds the normal profit, so the firm has some money left over for expansion</li>
+</ul>
+<h2 id="perfect-competition">Perfect Competition</h2>
+<ul>
+<li>A perfectly competitive model assumes: 1 Identical products, goods that are not differentiable and perfect substitutes 2 Ease of entry and exit to the market 3 Price Takers 4 Large numbers of firms
+<ul>
+<li>Ex. Agriculture, Low skilled labour, low tech manufacturing</li>
+</ul></li>
+<li>Revenue depends on 2 factors:
+<ul>
+<li>The saleable price of output</li>
+<li>The quantity of output</li>
+</ul></li>
+<li><p>Since they are price takers, the price is determined by market supply and market demand.</p></li>
+<li><p>In the short run, a profit maximizing firm will produce where its MC = MR.</p></li>
+<li><p>If at the quantity MC = MR, the ATC is less than its AR, economic profits equal to the Q x difference will be made.</p></li>
+<li><p>If at QE, the ATC &gt; AR, then loss minimization will take place. Losses are inevitable. If at QE ATC = D = AR, the company will earn a normal profit, and break even.</p></li>
+<li><p>The market is in long run equilibrium when firms break even.</p></li>
+<li><p>The market is in short run equilibrium when MC = MR.</p></li>
+<li><p><strong>Entry eliminates profits -</strong> Profits attract competitors who drive down the price until all firms are breaking even.</p></li>
+<li><p>** Exit eliminates losses -** Losses repel firms, who increase scarcity by their absence thus increasing prices.</p></li>
+<li>Shut down occurs when P &lt; AVC; or where TL &gt; TFC #### Efficiencies</li>
+<li>Productive Efficiency - When resources are being used in the least cost manner - <span class="math"><script type="math/tex; mode=display"> min(ATC) = P. </script></span></li>
+<li>Allocative Efficiency - <span class="math"><script type="math/tex; mode=display"> MC = MB </script></span>, max profits</li>
+<li>Non productively efficient firms must:
+<ul>
+<li>produce in a manner that reduces ATC to minimum</li>
+<li>experience economic losses, and shut down</li>
+</ul></li>
+</ul>
+<h2 id="monopoly">Monopoly</h2>
+<ul>
+<li>Assumptions:
+<ul>
+<li>Single seller</li>
+<li>No close substitutes</li>
+<li>Price makers</li>
+<li>Barriers to entry [Technical, competitive or cost- related impediments to joining a market and competing against existing firms.]
+<ul>
+<li>Economies of Scale, Legal Barriers, Ownership of resources, Aggro Tactics</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="demand-and-revenue-curves">Demand and Revenue Curves:</h4>
+<ul>
+<li>The demand curve is not flat, rather it slants downwards for a monopoly.</li>
+<li><p>As P– Q++, AR is consistent with P, because the monopolist is charging the same price for all customers - lowering price for one product lowers prices for all products</p></li>
+<li>TR = P*Q initially rises as P is lowered and more Q is consumed, though drops when MR becomes less than 0. The max TR is at MR = 0. TRT can explain this, because at MR = 0, PED = 1.</li>
+<li><strong>Revenue Maximization</strong> may increase brand power, creating EoS
+<ul>
+<li>Occurs when MR = 0</li>
+</ul></li>
+<li><strong>Natural Monopoly</strong> occurs when a single large firm can produce cheaper than two smaller ones
+<ul>
+<li>EoS only reapable at large outputs</li>
+<li>Large fixed Costs
+<ul>
+<li>Eg. Utilities, Sewage, Water</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="proscons-of-a-monopoly">Pros/Cons of a Monopoly</h4>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Higher prices enable greater research and development</td>
+<td>Higher Prices/Lower Qty Out</td>
+</tr>
+<tr class="even">
+<td>Economies of scale</td>
+<td>Producer welfare gains at expense of consumers</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Incentive problems {Improvement, Competition Elimination}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Policies to regulate Monopoly Power:
+<ul>
+<li>Natural monopoly monitoring</li>
+<li>Anti Trust legislation to break up large firms</li>
+</ul></li>
+</ul>
+<h4 id="price-discrimination">Price Discrimination</h4>
+<ul>
+<li>PD is when different prices are charged for different consumers for the same good by the same provider.</li>
+<li>Necessary Conditions:
+<ul>
+<li>Price makers</li>
+<li>Varied consumer elasticities</li>
+<li>Ability to separate consumers based on:
+<ol type="1">
+<li>Time</li>
+<li>Age</li>
+<li>Income</li>
+<li>Taste</li>
+<li>Gender</li>
+<li>Location</li>
+<li>Type {Leisure/Business}</li>
+</ol></li>
+</ul></li>
+<li>First Degree: By Consumer
+<ul>
+<li>Theoretically perfect car salesmen find max price for each consumer</li>
+<li>All consumer surplus is eliminated</li>
+<li>Profits/Output are greater</li>
+<li>Allocative efficiency</li>
+<li>Welfare los is eliminated (THERE IS BENEFIT!)</li>
+</ul></li>
+<li>Second Degree: By Qty
+<ul>
+<li>Bulk buying/Season pass</li>
+<li>Increases TR</li>
+</ul></li>
+<li>Third Degree - By consumer groups
+<ul>
+<li>Happy Hour, Female Haircuts
+<ul>
+<li>Profits/Revenues increase</li>
+<li>Kinked curves</li>
+</ul></li>
+</ul></li>
+<li>Evaluation:
+<ul>
+<li>Firms can increase profits, power over consumers</li>
+<li>DW loss is Reduced</li>
+<li>Some consumers can newly afford things</li>
+</ul></li>
+</ul>
+<h2 id="oligopoly-and-monopolistic-competition">Oligopoly and Monopolistic Competition</h2>
+<ul>
+<li>Assumptions of Monopolistic Competition:
+<ul>
+<li>Large Number of Firms</li>
+<li>Free Entry/exit</li>
+<li><strong>Product differentiation</strong> based on:
+<ul>
+<li>Appearance</li>
+<li>service</li>
+<li>Quality</li>
+<li>Expertise</li>
+<li>Location</li>
+<li>Reputation</li>
+</ul></li>
+</ul></li>
+<li>Curve is relatively more elastic</li>
+<li><p>Long Run Econ profits can exist bc long run is a a series of short runs, continual differentiation can allow profits in perpetuity</p></li>
+<li><strong>Monopolistic Competition and Efficiency:</strong>
+<ul>
+<li>Allocative Efficiency: P[AR] = MC</li>
+<li>Productive Efficiency: P = min(ATC)</li>
+<li>In the long run equilibrium, neither Allocative nor Productive efficiency would be achieved</li>
+<li>Judging by both types of efficiency, <strong>production is too low.</strong> This is known as <strong>excess capacity</strong></li>
+</ul></li>
+</ul>
+<h2 id="oligopoly">Oligopoly</h2>
+<ul>
+<li>Assumptions
+<ul>
+<li>A few sellers dominate the industry</li>
+<li>A small group of firms can exert significant market power - They can: - Control Prices - Create barriers to entry - Exert political/legal influence - Own or restrict factors of production - <strong>Barriers to entry</strong> are high, like init fixed costs, access to resources - <strong>Interdependence</strong> - A firm’s behavior is based on the actions of other firms. The actions of a single large firm can affect the entire market. - <strong>Strategic thinking</strong> - The oligopoly can monitor several other firms, and choose whether to collude or compete.</li>
+<li>Whether or not an oligopoly exists is determined by a concentration ratio.</li>
+<li>It is expressed as <span class="math"><script type="math/tex; mode=display"> CR_x </script></span> where X is the num of firms controlling a certain percentage of the market</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math"><script type="math/tex; mode=display">CR_4</script></span></th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Perf. Competition</td>
+</tr>
+<tr class="even">
+<td>&lt;50</td>
+<td>Monopolistic Competition</td>
+</tr>
+<tr class="odd">
+<td>51 - 80</td>
+<td>Oligopoly</td>
+</tr>
+<tr class="even">
+<td>&gt; 80</td>
+<td>Monopoly</td>
+</tr>
+</tbody>
+</table>
+<h4 id="game-theory">Game Theory</h4>
+<ul>
+<li>A mathematical model of thinking about decision making based on the decisions of other parties.</li>
+<li>Based on <strong>Rational Expectations</strong></li>
+<li>Decision making of whether or not to advertise based on whether or not another business does the same.</li>
+</ul>
+<h4 id="formal-collusion-cartel-formation">Formal Collusion: Cartel Formation</h4>
+<ul>
+<li>A cartel is an agreement whether formal or not, between competitive parties to limit competition and fix Prices
+<ul>
+<li>A cartel occurs when oligopolists agree to take specific market action in a coordinated and sustained effort to enhance profits, in continuous efforts in several forms:
+<ul>
+<li>Restricting Output</li>
+<li>Raising prices</li>
+<li>Restricting R and D and Innovation</li>
+<li>Restricting Advertisements</li>
+</ul></li>
+</ul></li>
+<li>This may be illegal, backstabbing is incentivized, competition may be drawn in</li>
+<li><strong>Informal collusion</strong> is when a firm establishes price leadership - it can survive a price war</li>
+<li>Non Collusive oligopolies occur when firms do not collude:
+<ul>
+<li>Firms constantly face the choice to collude or compete, as described in the prisoner’s dilemma.</li>
+<li>If a firm <em>increases prices</em> from the equilibrium, it will <em>face more elastic demand</em> because other firms won’t follow, and its market share will decrease.</li>
+<li>If a firm <em>lowers prices</em> from the equilibrium, in order to steal market share, competitors will <em>lower their prices</em>, causing a price war which lowers TR for all firms.</li>
+<li>There is thus an incentive to freeze prices.</li>
+</ul></li>
+<li><strong>Non price competition:</strong>
+<ul>
+<li>Based on Service/Demand/Appearance/Brand Power/Quality</li>
+<li>Or reduction of costs #### Advantages and Disadvantages</li>
+</ul></li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Allocative efficiency and productive efficiency cannot be achieved</li>
+<li>There are incentives to take advantage of the consumer, to discourage competition, and to collude</li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li>Continuous economic profits could exist due to the barriers of energy</li>
+<li>Research and development could exist</li>
+<li>Firms that innovate may make some economies of scale, which could ultimately lower prices for consumers.</li>
+</ul></body>
+</html>
