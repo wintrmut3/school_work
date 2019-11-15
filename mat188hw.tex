@@ -1,0 +1,62 @@
+\documentclass[twocolumn]{article}
+\usepackage[margin=1 in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture Homework for 14 November 2019 MAT186| James Xu | 1006058855}
+
+\begin{document}
+
+
+  \textbf{HOMEWORK (1): Determine the point C that satisfies the MVTI for $$f(x) = x^2 + 3x + 2 | x\in[1,2]. $$}
+
+   \textbf{Homework (2) Integrate $$\int x \sqrt{x+1} dx $$} via i) Substitution and ii) Integration by parts \\\\
+   1)  $$f(x) = x^2 + 3x + 2 | x\in[1,2] $$
+   $$\int_1^2 f(x) dx = (\frac{1}{3}x^3 + \frac{3}{2} x^2 + 2x + C)\Bigg|^2_1$$
+   $$= (\frac{1}{3}2^3 + \frac{3}{2} 2^2 + 2\times2) - (\frac{1}{3}1^3 + \frac{3}{2} 1^2 + 2)$$
+   $$= \frac{8}{3} + 6 + 4 - (\frac{1}{3} + \frac{3}{2} + 2)$$
+   $$= \frac{53}{6} = 8.833333$$
+
+   This is also the average value $\bar{f}$, as we're multiplying it by $\frac{1}{b-a} = \frac{1}{2-1} = 1$.\\\\
+
+   We need to find some $c$ such that $f(c) = \bar{f} = \frac{1}{2-1} \int f(x) dx = 8.8333333$.\\\\ By IVT we can show such a point exists by evaluating the function at the each endpoint, giving $f(2) = 12$ and $f(1) = 6$, and thus we know there exists some point $c\in[1,2]$ where $f(1)\leq(f(c)=8.8333...)\leq f(2)$. \\\\ This is easy enough to find, by solving for $x$: \\\\
+   $$f(c) =\frac{53}{6} = x^2 + 3x + 2 | x \in [1,2]$$
+   $$= c^2 + 3c + 2 - \frac{53}{6} = 0$$ \\\\ Solving this via the quadratic equation yields two roots, only one of which is in our domain, being $c \approx 1.514$. \\\\\\
+
+
+   2)$I = \int x \sqrt{x+1} dx $ \\
+   i) Via Substitution:
+   $$u = x+1$$
+   $$I =\int(u-1)\sqrt(u) du$$
+   $$= \int (u^{\frac{3}{2}}) du - \int \sqrt(u)du$$
+   $$= \frac{2}{5} u^{\frac{5}{2}} - \frac {2}{3} u^{\frac{3}{2}} + C$$
+   Reversing the substitution yields
+   $$= \frac{2}{5} (x+1)^{\frac{5}{2}} - \frac {2}{3} (x+1)^{\frac{3}{2}} + C$$
+   ii) Via I.B.P: \\
+   $dv = x$, $v = \frac{1}{2}x^2$, $u = \sqrt{x+1}$, $du = \frac{1}{2\times \sqrt{x+1}}$
+   $$\int(uv')dx = uv - \int vdu$$
+   $$\int(\sqrt{x+1}) (x) dx = (\frac{1}{2}x^2)(\sqrt{x+1})-\int{\frac{1}{2}x^2} \frac{1}{2\times \sqrt{x+1}}$$
+   $$= (\frac{1}{2}x^2)(\sqrt{x+1})-\frac{1}{4}\int \frac{x^2}{\sqrt{x+1}} dx$$
+   Integrating the second term with a substitution for u = x+1, we get $$\int \frac{x^2}{\sqrt{x+1}}dx = \int \frac {(u-1)^2}{\sqrt(u)}du = \int \frac{u^2 - 2u + 1}{\sqrt{u}}du$$
+   $$= \int u^\frac{3}{2} - 2u^\frac{1}{2} + u^\frac{-1}{2} du$$
+   $$=\frac{2}{5}u^\frac{5}{2} - \frac{4}{3}u^\frac{3}{2} + 2u^\frac{1}{2} + C$$
+   Reintroducing this we get
+   $$I = (\frac{1}{2}x^2)(\sqrt{x+1}) - \frac{1}{4}(\frac{2}{5}u^\frac{5}{2} - \frac{4}{3}u^\frac{3}{2} + 2u^\frac{1}{2}) + C $$
+   $$I = (\frac{1}{2}x^2)(\sqrt{x+1}) - (\frac{2}{10}u^\frac{5}{2} - \frac{1}{3}u^\frac{3}{2} + \frac{1}{2}u^\frac{1}{2}) +C  $$ Multiplying and dividing by 30 gets:
+   $$I = \frac{1}{30}(15x^2)(\sqrt{x+1}) - (6u^\frac{5}{2} - 10u^\frac{3}{2} + 15u^\frac{1}{2})) + C$$
+   which is pretty unhelpful. \\ \\If you exchange u and v, then you get:
+   $u = x$, $du = 1$, $dv = \sqrt{x+1}$, $v = \int \sqrt{x+1}$, via u-substitution for $u=x+1$ we get $v = \frac{2}{3}u^\frac{3}{2}$. This gives us \\ $$\int(\sqrt{x+1}) (x) dx = x\frac {2}{3}(\sqrt{x+1}^3)-\int \frac {2}{3}(\sqrt{x+1}^3) \times 1 dx$$
+   A second similar u substitution for the integral on the right side yields:
+   $$\int\frac{2}{3}u^3 du = \frac{2}{3} \frac{2}{5} u^\frac{5}{2} = \frac{4}{15} u^\frac{5}{2} + C$$ so the above integral I is equal to
+   $$x\frac {2}{3}(x+1)^\frac{3}{2}-\frac{4}{15} (x+1)^\frac{5}{2} + C$$
+   $$= \frac{2(5x(x+1)^\frac{3}{2})-2(x+1)^\frac{5}{2}}{15} + C$$ \\\\
+   \textbf{NOTE:}
+   While this looks like a different answer compared to 2i, they are equivalent.  Now, there are two ways you can figure this out:
+   \begin{enumerate}
+     \item Use some graphing software
+     \item Maximally expand (and maybe factor) both equations
+   \end{enumerate}
+
+   I graphed them. The amount of work it would take to algebraically manipulate them to equivalence is unnecessary and pretty ridiculous, and not really calculus so much as accounting at that point so I'm not doing it. It doesn't really matter anyway, as long as I have been convinced that these two methods return the same antiderivative, at most separated by some constant C. How exactly they can be algebraically manipulated to be the same is rather irrelevant in my opinion, just trust that they're the same. \\\\ The LaTeX code (clipped to save paper) can be found on below and on the left. The full code is on my github (here)
+  \end {document}
